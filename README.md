@@ -8,7 +8,7 @@ Header only library for non-linear optimization using Eigen. I wrote this librar
 - Newton-Raphson
 - Gaussian-Newton
 - Gradient descent
-- Levenberg-Marquard
+- (TODO) Levenberg-Marquard
 
 ## Usage
 
