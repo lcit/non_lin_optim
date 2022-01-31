@@ -50,12 +50,12 @@ std::cout << H << std::endl;
     
 ### Build and run the examples
 
-Use the following command to build and run the executable target.
+Use the following command give an example of how to build and run an example.
 
 ```bash
-cmake -S examples -B build/examples
-cmake --build build/examples
-./build/examples/test --help
+cmake -S examples -B build/examples/refine_camera_extrinsics
+cmake --build build/refine_camera_extrinsics
+./build/refine_camera_extrinsics/refine_camera_extrinsics --help
 ```
 
 ### Build and run test suite
@@ -103,22 +103,3 @@ open build/doc/doxygen/html/index.html
 ```
 
 To build the documentation locally, you will need Doxygen, jinja2 and Pygments on installed your system.
-
-### Build everything at once
-
-The project also includes an `all` directory that allows building all targets at the same time.
-This is useful during development, as it exposes all subprojects to your IDE and avoids redundant builds of the library.
-
-```bash
-cmake -S all -B build
-cmake --build build
-
-# run tests
-./build/test/GreeterTests
-# format code
-cmake --build build --target fix-format
-# run standalone
-./build/standalone/Greeter --help
-# build docs
-cmake --build build --target GenerateDocs
-```
